@@ -1,7 +1,7 @@
-still wip. to-do: 
-[] port older work.
-[] delete old repos. 
-[] find a way to share outputs online.
+still wip. to-do:
+- [ ] port older work.
+- [ ] delete old repos. 
+- [ ] find a way to share outputs online.
 
 ---
 
