@@ -1,0 +1,96 @@
+
+ /*-----------------FONT PRELOADS-----------------*/
+
+ /*
+100 – Thin.
+200 – Extra Light (Ultra Light)
+300 – Light.
+400 – Normal.
+500 – Medium.
+600 – Semi Bold (Demi Bold)
+700 – Bold.
+800 – Extra Bold (Ultra Bold)
+ */
+
+ /*Title*/
+ @font-face {
+    font-family: 'JetBrains-Mono';
+    font-style: normal;
+    font-weight: 600;
+    src: url("/24-10-08_Mapper-v2/fonts/JetBrainsMono-SemiBold.ttf") format("truetype"); /* Correct format */
+}
+
+ /*BottomText*/
+ @font-face {
+    font-family: 'JetBrains-Mono';
+    font-style: normal;
+    font-weight: 200;
+    src: url("/24-10-08_Mapper-v2/fonts/JetBrainsMono-ExtraLight.ttf") format("truetype"); /* Correct format */
+}
+
+
+html {
+    background-color: rgb(16, 15, 15); 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+h1{
+    font-family: 'JetBrains-Mono'; 
+    font-weight: 600;
+    font-size: 24px;
+    color: rgb(206, 205, 195); 
+}
+
+h5{
+    font-family: 'JetBrains-Mono'; 
+    font-weight: 200;
+    font-size: 10px;
+    color: rgb(206, 205, 195); 
+}
+
+.all-text {
+    margin: 2%;
+    }
+
+.title{
+display: flex; 
+width: 100%; 
+}
+
+.details {
+    margin-top: -20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Optional: vertically centers the elements */
+    width: 100%; /* Ensure it takes full width */
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.canvas-container{
+margin-bottom: 100px;
+margin-top: -50px;
+}
+
+ul{
+list-style-type: none; 
+margin: 0;
+padding: 0;
+}
+
+li{
+margin-bottom: 1.22em;
+}
+
+

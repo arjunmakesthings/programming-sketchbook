@@ -1,0 +1,30 @@
+html, body {
+height: 90%; 
+margin: 100;
+background-color: black; 
+  }
+  
+  .sketch-holder {
+    display: flex;
+  
+    /* This centers our sketch horizontally. */
+    justify-content: center;
+  
+    /* This centers our sketch vertically. */
+    align-items: center;
+
+  }
+
+  .but{
+    display: flex;
+
+        /* This centers our sketch horizontally. */
+        justify-content: center;
+  
+        /* This centers our sketch vertically. */
+        align-content: center;
+
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 24;
+  }
+  

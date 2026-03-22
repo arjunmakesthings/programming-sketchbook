@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> ![endif]-->
+<html lang ="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mapper</title>
+    <meta name="description" content="A collection of expressive typography experiments, using algorithms to better convey meaning | Arjun's Archive">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.10.0/p5.js"></script>
+</head>
+
+<body>
+
+  <div class = "all-text">
+  <div class = "title"><h1>Mapper</h1></div>
+
+  <div class = "details">  
+    <h5 class = "left">No bullshit, always free, keyboard-first, online mind-mapping tool.</h5><br>
+    <h5 class = "right" id = "datetime">Date, time.</h5>
+  </div>
+
+</div>
+
+<script>
+  function updateDateTime() {
+      const now = new Date();
+      const dateOptions = { 
+          year: 'numeric', 
+          month: 'short', 
+          day: 'numeric'
+      };
+      const timeOptions = {
+          hour: '2-digit', 
+          minute: '2-digit',
+          hour12: true 
+      };
+
+      const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+      const formattedTime = now.toLocaleTimeString('en-US', timeOptions); // Remove space before AM/PM
+      
+      // Combine date and time with " | " separator
+      const formattedDateTime = `${formattedDate} | ${formattedTime}`;
+
+      document.getElementById('datetime').textContent = formattedDateTime;
+  }
+
+  // Call the function once when the page loads
+  updateDateTime();
+
+  // Update the date and time every second
+  setInterval(updateDateTime, 1000);
+</script>
+
+  <script src="mapper.js"></script>
+
+  <div id="canvas-container"></div>
+
+  <div class = "all-text">
+  <div class = "details">  
+    <h5 class = "left">
+      <ul>
+        <li>ENTER for new node</li>
+        <li>/ for sub-branch (think deeper)</li>
+        <li>, for alt-branch (think wider)</li>
+      </ul>
+    </h5><br>
+    <h5 class = "right">
+      <ul>
+        <li>CLICK + DRAG to pan</li>
+        <li>Scroll to zoom</li>
+        <li></li>
+      </ul>
+    </h5>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+structure: 
+- branches contain: 
+    - x position
+    - y position
+    - width (left x - rightMost x)
+    - height (top y - bottomMost y)
+    - nodes, which contain:
+        - text
+        - relative positioning
+        - state
+
+
+rules:
+- the text cannot contain any punctuation marks. 
+
+
+keyboard events:
+node-makers:
+    - ENTER creates a new branch, with starting nodeand starting node
+        - / creates a sub-node
+        - , creates an alt-node
+
+navigation:
+- leftArrow makes left-object active
+- rightArrow makes right-object active
+- upArrow makes top-object active
+- downArrow makes down-object active
+
+
+states:
+- active:
+    - typing == enabled
+    - / | , | ENTER == enabled
+
+- inactive
+    - is keyboard focusable
+    - typing == disabled
+    - / | , | ENTER == disabled
+
+
+user flow:
+- a person is going to press ENTER to create a new node. 
+- then, they will write something in that node (without any punctuation).
+- when they are done writing, they will either: 
+    - create a new node: [ENTER]
+    - create a 'sub' branch (think deeper): [/]
+    - create an 'alt' branch (think wider): [,]
+- additionally, they may want to navigate to any of the created nodes. 

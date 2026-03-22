@@ -1,0 +1,14 @@
+html {
+    background-color: rgb(204, 204, 204);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-family: "Segoe UI", Tahoma, Verdana, sans-serif; 
+    color: red; 
+}
+
