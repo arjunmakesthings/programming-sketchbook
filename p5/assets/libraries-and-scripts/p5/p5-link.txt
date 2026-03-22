@@ -1,0 +1,7 @@
+online (always fetches the latest version): 
+
+https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js
+
+i usually load the local file (just because i'm scared of libraries going out or whatever). 
+
+note to self: a .min file is the same file as the original library, just not with the spaces and what-not. this usually means that it's a smaller (but unreadable) file.
