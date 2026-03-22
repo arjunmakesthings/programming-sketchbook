@@ -1,4 +1,4 @@
-### installing:
+### install:
 
 ---
-### previewing: 
+### preview locally: 
