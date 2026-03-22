@@ -14,6 +14,7 @@ need the following to work:
 ---
 ### preview locally: 
 - `ctrl + backtick` to start terminal in vscode. 
+
 - use `sclang` to start supercollider. it starts by default with the [startup script](/resources/default-startup-script). 
 
 - make a `.tidal` file. 
@@ -24,3 +25,5 @@ need the following to work:
     - `Ctrl+Option+H` to hush
 
 - remember that the sample rate must be agreed upon. a pair of bluetooth headphones have a different sample-rate than wired-ones or headphones. 
+
+- `ctrl + d` to terminate sclang. 
