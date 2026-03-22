@@ -1,4 +1,4 @@
-> w wake up in the morning with an idea, and it makes my day to think of adding a couple of lines to my program. it gives me a real high. it must be the way poets feel, or musicians, or painters. programming does that for me.
+> i wake up in the morning with an idea, and it makes my day to think of adding a couple of lines to my program. it gives me a real high. it must be the way poets feel, or musicians, or painters. programming does that for me.
 > 
 > [donald knuth](https://cacm.acm.org/opinion/interview-donald-knuth-a-lifes-work-interrupted/).
 
@@ -35,7 +35,7 @@ each folder has the following structure inside:
     - `/libraries-and-scripts`: libraries & scripts required to run the sketch. 
     - `media`: media files (videos, photos).
 
-- `./resources/`: text files, links, documents for learning / referencing. 
+- `./resources/`: text-files, links, documents for learning / referencing. 
 
  ---
  
