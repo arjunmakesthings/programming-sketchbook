@@ -44,3 +44,12 @@ each folder has the following structure inside:
 
 - `./resources/`: text-files, links, documents for learning / referencing. 
  
+---
+### local preview: 
+i use `python3 -m http.server 8000 --bind 0.0.0.0` to start a local server. 
+
+using bind enables us to listen to other devices, such as my phone. to do so, you get ip-address of computer with: `ipconfig getifaddr en0`. 
+
+then do `ipaddress:port` to get access to the directory on another device. 
+
+i've made it easy for myself to locally preview all the work with a shell-script, which is stored [here](https://github.com/arjunmakesthings/local-preview-helper). 

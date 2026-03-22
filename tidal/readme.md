@@ -11,6 +11,14 @@ need the following to work:
 - superdirt (samples)
 - sc-3 (unit generator plugins)
 
+### shell script to make sclang accessible: 
+```
+# for tidal:
+export PATH="/Users/$HOME$/.local/bin:$PATH"
+source ${HOME}/.ghcup/env
+export PATH="/Applications/SuperCollider.app/Contents/MacOS:$PATH"
+```
+
 ---
 ### preview locally: 
 - `ctrl + backtick` to start terminal in vscode. 
