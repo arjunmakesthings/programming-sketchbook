@@ -13,6 +13,7 @@ need the following to work:
 
 ---
 ### preview locally: 
+- `ctrl + backtick` to start terminal in vscode. 
 - use `sclang` to start supercollider. it starts by default with the [startup script](/resources/default-startup-script). 
 
 - make a `.tidal` file. 
