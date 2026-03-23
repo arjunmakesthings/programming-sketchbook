@@ -4,7 +4,7 @@
 
 -- from my startup-file in supercollider, i have 12 channels.
 
--- the $ applies everything on the left to everything on the right
+-- the $ applies everything on the left to everything on the right. 
 
 d1 $ "bd bd"
 
@@ -27,6 +27,7 @@ d2 $ "bd [bd bd] bd"
 -- you can see a pattern with this: 
 drawLine "1 [2 3] 4"
 
+-- $ signifies a pattern; while # is a modification on the pattern.
 -- samples loaded are here: /Users/a/Library/Application Support/SuperCollider
 d2 $ "bd [bd bd] bd" # s "808bd"
 
@@ -43,22 +44,20 @@ d1 $ n "0 1 2 3" # s "drum"
 
 d1 $ sound "drum" + n "0 1 2 3"
 
-
 -- notes: 
+d1 $ note "8" # sound "superpiano"
 
--- $ signifies a pattern; while # is a modification on the notes. 
-d1 $ n "f a c e" # s "superpiano"
+note "3" --returns  t > (pure note : 3.0 n (ds5)) 
+-- ^ d sharp 5. 0 is c5. 
 
--- visualizing a pattern:
+-- you can also just use standard notation. 
+d1 $ note "c3 c4 c5" # s "superpiano"
 
+-- sharps and flats are s and f. 
+d1 $ note "c3s c4f c5" # s "superpiano"
 
--- waves to manipulate values: 
+-- start at the beginning of a cycle: 
+d2 $ qtrigger $ sound "bd hh hh hh"
 
-d1 $ sound "bd*4" # gain (slow 2 $ range 0.5 2 sin)
-
-
-
-
-
-
-
+-- increase octave by adding number at the end; like so: 
+d1 $ n "c4 d4s f4 g4" # s "superpiano" |+ n "<12 24 -6>"

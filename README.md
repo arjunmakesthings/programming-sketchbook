@@ -1,5 +1,5 @@
 still wip. to-do:
-- [ ] port older work.
+- [x] port older p5 work.
 - [ ] delete old repos. 
 - [ ] find a way to share outputs online.
 
@@ -43,6 +43,8 @@ each folder has the following structure inside:
     - `media`: media files (videos, photos).
 
 - `./resources/`: text-files, links, documents for learning / referencing. 
+
+folders are sorted reverse by name on my explorer, allowing me to get the latest `yy` on top. 
  
 ---
 ### local preview: 

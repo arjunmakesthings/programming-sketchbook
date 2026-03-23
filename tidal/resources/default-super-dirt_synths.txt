@@ -1,0 +1,35 @@
+Classic / Analog-style
+superpiano – physical-modeled piano
+supersquare – pulse/square wave
+supersaw – detuned saw stack
+superpwm – pulse-width modulation synth
+supercomparator – harmonically rich comparator-based synth
+superchip – lo-fi chip tune synth
+superhoover – rave-style hoover synth
+supersine – clean sine wave synth
+superfm – FM synthesis engine
+
+Noise / Texture
+supernoise – filtered noise generator
+superstatic – radio/static-style noise
+superbuf – buffer-based synth (sample playback style)
+Physical / Acoustic-ish
+supergong – metallic resonant tones
+superzow – bowed/physical modeling hybrid
+superpluck – plucked string model
+supermandolin – mandolin-like string synth
+Experimental / Hybrid
+superhex – harmonic-rich digital synth
+super303 – acid bassline (inspired by Roland TB-303)
+supervibe – evolving harmonic texture
+superbell – bell-like tones
+
+🧪 Less-documented / Variant Synths
+
+Depending on version or extensions:
+superwavemechanics
+supergrind
+superreese – detuned bass (drum & bass style)
+superbass
+superlead
+superorgan

@@ -95,7 +95,7 @@ d1 $ fast 2 $ s "dr_few" <| n (run 8) -- eight loud drum sounds
 d1 $ s "drumtraks" <| n (run 13) -- loudish kit
 d1 $ s "e" <| n (run 8) -- 8 short and quiet glitchy sounds, similar
 d1 $ slow 2 $ s "east" <| n (run 9) -- 9 'world' drum sounds, ok
-d1 $ slow 4 $ s "em2" <| n (run 6) -- six longer sounds, kalimba, flute, loon?
+d1 $ slow 4 $ s "em2" <| n (run 6) -- six longer sounds, kalimba, flute, loong
 d1 $ s "erk" -- voice 'one two three hit it'
 d1 $ s "f" -- one short synth note, actually a bit below Eb
 d1 $ s "feel" <| n (run 7) -- quite nice bank of 7 drum sounds
