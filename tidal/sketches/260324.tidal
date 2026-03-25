@@ -1,0 +1,9 @@
+-- ikeda inspired.
+
+d1
+$ fast (range 12 24 rand)
+$ s "supersaw"
+# freq "840"
+# gain 0.2
+
+hush
