@@ -22,6 +22,7 @@ a sketch is defined as: "a rough or unfinished version of any creative work". th
 projects have their own repositories, and are archived on this [website](https://arjunmakesthings.github.io/projects.html). 
 
 ---
+
 when i begin a sketch, i am usually relying on a programming-language's capability to provide certain functions; so that my creative-thought can be materialized. therefore, a sketch always has a dominant language it is birthed in (even if it relies on others to function). all sketches in this repository are organized into the folder of the dominant language: 
 
 - `/p5`: uses [p5.js](https://p5js.org) (which isn't 'technically' a language, but the distinction is immaterial for us). usually for 2-d cpu-based sketching / interactive-work.
@@ -47,6 +48,7 @@ each folder has the following structure inside:
 folders are sorted reverse by name on my explorer, allowing me to get the latest `yy` on top. 
  
 ---
+
 ### local preview: 
 i use `python3 -m http.server 8000 --bind 0.0.0.0` to start a local server. 
 
