@@ -1,0 +1,36 @@
+--at rc / livecode session. 
+
+--drums: 
+d1 $ stack [
+  s "bd bd*2 ~ bd",
+  sometimes rev $ s "hh*4" # delay 0.5,
+  often fast 2 $ s "sd*2" # gain 0.5
+  --rarely rev $ s "cp" # gain 0.8
+  --almostNever rev $ s "ho" # gain 1.5
+]
+
+--bass line: 
+d2 $ stack [
+  echo 8 0.8 0.6 $ someCycles (# fshiftphase 2) $ n "0 1 [~ 2] 3" # sound "supersaw" # gain 0.7 # lpf 400
+]
+
+d3 $ stack [
+  $ echo 24 (-0.25) 0.75
+  $ s "ho"
+  # hpf 12000
+]
+
+d4 $ stack [
+$ s "supersaw"
+  # freq (stack [
+        range (choose [0, 100, 200]) 840 $ fast 16 tri,
+        range (choose [0, 80, 160]) 640 $ slow 16 tri,
+        range (choose [0, 40, 120]) 340 $ slow 16 tri,
+        range (choose [0, 60, 180]) 540 $ slow 16 tri
+        ])
+  # delay (range 0 3.0 sine)
+  -- # delayfeedback 0.2
+  # lpf 800
+  # gain 0.5
+]
+
