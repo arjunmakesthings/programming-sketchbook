@@ -4,6 +4,8 @@
 
 let sw = false;
 
+let svg_tog = false;
+
 function setup() {
   createCanvas(1000, 1000);
 
@@ -13,9 +15,11 @@ function setup() {
 }
 
 function draw() {
+  beginRecordSVG(this, "output.svg"); 
   background(255);
   draw_sq2(width / 2, height / 2, 700, 0);
 
+  endRecordSVG(); 
   noLoop();
 }
 
@@ -51,4 +55,8 @@ function draw_sq2(x, y, w, a, c_switch = true) {
   a+=0.015; 
 
   draw_sq2(x, y, w - 5, a, !c_switch);
+}
+
+function mousePressed(){
+  svg_tog = true;
 }
