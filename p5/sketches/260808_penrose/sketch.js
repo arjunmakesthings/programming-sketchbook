@@ -9,7 +9,7 @@ function setup() {
   all_tris[0] = new Triangle(500, 50, 208, 950, 792, 950, 0);
 
   //subdivide:
-  for (let i = 0; i < 9; i++) {
+  for (let i = 0; i < 5; i++) {
     all_tris = all_tris.map((t) => t.subdivide()).flat();
   }
 }
