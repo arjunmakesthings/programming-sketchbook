@@ -1,18 +1,28 @@
-//square subdivision.
+//square subdivision. svg; forked backwards 260808_1706.
 
 //given a set of starting coordinates, draw yourself over & over again with shrinking widths & alternating colours; until you reach an end point.
 
 let sw = false;
 
+let svg_tog = false;
+
 function setup() {
   createCanvas(1000, 1000);
+
   rectMode(CENTER, CENTER);
-  background(255);
+
+  //angleMode(DEGREES);
 }
 
 function draw() {
+  if (svg_tog == true) {
+    beginRecordSVG(this, "output.svg");
+  }
+  background(255);
   draw_sq2(width / 2, height / 2, 700, 0);
-  noLoop(); 
+
+  endRecordSVG();
+  // noLoop();
 }
 
 function draw_sq2(x, y, w, a, c_switch = true) {
@@ -29,8 +39,9 @@ function draw_sq2(x, y, w, a, c_switch = true) {
   p3.add(random() * mult);
   p4.add(random() * mult);
 
-  fill(c_switch ? 255 : 0);
-  noStroke(); 
+  stroke(c_switch ? 100 : 0);
+  strokeWeight(random() * 2);
+  noFill();
 
   push();
   translate(x, y);
@@ -43,11 +54,11 @@ function draw_sq2(x, y, w, a, c_switch = true) {
   endShape(CLOSE);
   pop();
 
-  a += 0.015; 
+  a += 0.015;
 
   draw_sq2(x, y, w - 5, a, !c_switch);
 }
 
-function mousePressed(){
-  save ("frame.webp"); 
+function mousePressed() {
+  svg_tog = true;
 }
