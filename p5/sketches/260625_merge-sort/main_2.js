@@ -17,12 +17,16 @@ function merge_sort(arr) {
   } else {
     //perform sorting.
 
-    //make a copy of the original array.
+    //make a copy of the original array to avoid mutating the original one.
     let array_to_sort = arr;
+
     let sorted = new array(array_to_sort.length);
 
     //split into halves until smallest half is one unit.
+    let split_arrays =  
     split(array_to_sort);
+
+    return sorted;
   }
 }
 
