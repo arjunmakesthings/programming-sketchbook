@@ -16,36 +16,28 @@ function merge_sort(arr) {
     return;
   } else {
     //perform sorting.
-    let original = arr;
-    let sorted = [];
 
-    let split_up = split(original);
+    //make a copy of the original array.
+    let array_to_sort = arr;
+    let sorted = new array(array_to_sort.length);
 
-    //divide into two.
-
-    return split_up;
+    //split into halves until smallest half is one unit.
+    split(array_to_sort);
   }
 }
 
 //helpers:
-function split(arr){
-  let left = []; 
-  let right = []; 
-
-  for (let i = 0; i<arr.length/2; i++){
-    left.push(arr[i]); 
-    arr.splice(i,1); 
-  }
-  for (let i = 0; i<arr.length; i++){
-    right.push(arr[i]); 
-    arr.splice(i,1); 
-  }
-  return [left, right]; 
+function split(arr) {
+  let left = arr.slice(0, arr.length / 2);
+  let right = arr.slice(arr.length / 2, arr.length);
+  return [left, right];
 }
 
 //we want to return a sorted list.
 let org_arr = [6, 4, 7, 8, 2, 9];
-let sorted_arr = merge_sort(org_arr); 
-console.log("original array was: " + org_arr + "\n" + 
-  "new array is: " + sorted_arr
-); 
+// let sorted_arr = merge_sort(org_arr);
+// console.log("original array was: " + org_arr + "\n" +
+//   "new array is: " + sorted_arr
+// );
+
+console.log(split(org_arr));
