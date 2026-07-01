@@ -1,0 +1,26 @@
+--at rc / livecode session. 
+
+-- $ signifies a pattern; # is modification. for a pattern to be enclosed, you can use parentheses.
+d1 $ stack [
+    slow 2 (
+    s "bd bd [bd*2] ~ bd bd") # s "808",
+    fast 2(s "hh hh [hh*2]")
+]
+
+-- d1 $ fast 2 $ stack [
+--     slow 2 (
+--     s "bd bd [bd*2] ~ bd bd"),
+--     fast 2(s "hh hh [hh*2]")
+-- ]
+
+d2 $ n (slow 2 $ fmap (*7) $ run 8)
+  # s "supersaw"
+  # decay "[1 0.2]/4"
+  # voice "[0.5 0]/8"
+
+d1 $
+--   n (scale "minPent" "0 0 0 0")# n (choose [3, 5, 6, 7])
+    n "c4"
+  # s "superpiano"
+
+  hush
