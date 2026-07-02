@@ -30,8 +30,8 @@ function draw() {
   noLoop();
 }
 
-const min = 0.2;
-const shrink = 0.955;
+const min = 0.09;
+const shrink = 0.987;
 
 function draw_points(start, l, state = 0) {
   if (l <= min) return;
@@ -62,7 +62,7 @@ function draw_points(start, l, state = 0) {
 
   push();
   translate(cx, cy);
-  const ang = random(-2, 2);
+  const ang = random(-15, 15);
   rotate(ang);
   for (let i = 0; i <= steps; i++) {
     let x = lerp(start.x, end.x, i / steps);
@@ -83,7 +83,7 @@ function draw_points(start, l, state = 0) {
 
     const d = dist(wx, wy, width * 0.5, height * 0.5);
 
-    strokeWeight(map(d, 0, maxD, 1.5, 0.75));
+    strokeWeight(map(d, 0, maxD, 1.2, 0.5));
 
     point(round(lx + n), round(ly + n));
   }
