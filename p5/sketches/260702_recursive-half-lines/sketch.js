@@ -31,7 +31,7 @@ function draw() {
 }
 
 const min = 0.09;
-const shrink = 0.987;
+const shrink = 0.887;
 
 function draw_points(start, l, state = 0) {
   if (l <= min) return;
@@ -62,14 +62,14 @@ function draw_points(start, l, state = 0) {
 
   push();
   translate(cx, cy);
-  const ang = random(-15, 15);
+  const ang = random(-4, 4);
   rotate(ang);
   for (let i = 0; i <= steps; i++) {
     let x = lerp(start.x, end.x, i / steps);
     let y = lerp(start.y, end.y, i / steps);
 
     let n =
-      noise(frameCount * x * y) * dist(x, y, width / 2, height / 2) * 0.0095;
+      noise(frameCount * x * y) * dist(x, y, width / 2, height / 2) * 0.0000095;
     const lx = x - cx;
     const ly = y - cy;
 
@@ -120,5 +120,5 @@ function draw_points(start, l, state = 0) {
 // }
 
 function mousePressed() {
-  save("frame.webp");
+  // save("frame.webp");
 }
