@@ -32,4 +32,5 @@ function draw() {
       pop(); 
     }
   }
+  save ("frame.webp")
 }
