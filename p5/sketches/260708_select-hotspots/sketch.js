@@ -10,23 +10,23 @@ function setup() {
 
   //test:
 
-  for (let i = 0; i<spots.length; i++){
-    strokeWeight(10); 
-    stroke(0); 
+  for (let i = 0; i < spots.length; i++) {
+    strokeWeight(10);
+    stroke(0);
 
-    point(spots[i][0], spots[i][1]); 
+    point(spots[i][0], spots[i][1]);
   }
 }
 
 /*
 for a canvas of width (w) & height (h), 
-return tuples of {x,y} coordinates for unique points such that: 
+return tuples coordinates for unique points such that: 
 
 - points are min-distance away from each other
 - and are somewhat uniformally distributed across space.
 */
 function find_spots(w, h, n, min_spacing) {
-  let posis = []; 
+  let posis = [];
   let size = min_spacing;
 
   //check if co-centric circles min_spacing apart can fit onto the space:
