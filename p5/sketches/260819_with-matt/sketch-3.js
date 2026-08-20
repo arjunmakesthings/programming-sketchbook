@@ -82,12 +82,17 @@ function draw_line() {
 
       strokeWeight(1);
       if (sw) {
-        line(seg_start.x, seg_start.y, curr_point.x, curr_point.y);
+        // line(seg_start.x, seg_start.y, curr_point.x, curr_point.y);
+        beginShape();
+        temp_buffer.forEach((p) => vertex(p.x, p.y)); 
+        endShape();
       }
       seg_start = curr_point.copy();
-      sw = !sw; 
+      sw = !sw;
+      temp_buffer = []; 
     }
     prev_point = curr_point.copy();
+    temp_buffer.push(prev_point);
   }
 
   // for (let w = 0; w < 10; w += 0.01) {
